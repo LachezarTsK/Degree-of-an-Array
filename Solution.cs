@@ -30,12 +30,12 @@ public class Solution
         }
 
         Dictionary<int, ValueRange> valueWithMaxFrequencyToRange
-                = createMapValueWithMaxFrequencyToRange(input, frequency, maxFrequency);
+                = CreateMapValueWithMaxFrequencyToRange(input, frequency, maxFrequency);
 
-        return findLengthShortestSubarrayWithMaxFrequency(valueWithMaxFrequencyToRange);
+        return FindLengthShortestSubarrayWithMaxFrequency(valueWithMaxFrequencyToRange);
     }
 
-    private Dictionary<int, ValueRange> createMapValueWithMaxFrequencyToRange(int[] input, int[] frequency, int maxFrequency)
+    private Dictionary<int, ValueRange> CreateMapValueWithMaxFrequencyToRange(int[] input, int[] frequency, int maxFrequency)
     {
         Dictionary<int, ValueRange> valueWithMaxFrequencyToRange = new Dictionary<int, ValueRange>();
 
@@ -55,7 +55,7 @@ public class Solution
         return valueWithMaxFrequencyToRange;
     }
 
-    private int findLengthShortestSubarrayWithMaxFrequency(Dictionary<int, ValueRange> valueWithMaxFrequencyToRange)
+    private int FindLengthShortestSubarrayWithMaxFrequency(Dictionary<int, ValueRange> valueWithMaxFrequencyToRange)
     {
         int lengthShortestSubarrayWithMaxFrequency = int.MaxValue;
 
